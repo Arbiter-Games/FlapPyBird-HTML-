@@ -21,7 +21,8 @@ class Flappy:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption("Flappy Bird")
-        window = Window(288, 512)
+        info = pygame.display.Info()
+        window = Window(info.current_w, info.current_h)
         screen = pygame.display.set_mode((window.width, window.height))
         images = Images()
 
